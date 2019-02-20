@@ -45,6 +45,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: ground
+  - name: background
     uniqueID: 3841759419
+    locked: 0
+  - name: obstacles
+    uniqueID: 2365546521
+    locked: 0
+  - name: New Layer
+    uniqueID: 3105596021
     locked: 0

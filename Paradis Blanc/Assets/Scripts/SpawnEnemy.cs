@@ -21,7 +21,7 @@ public class SpawnEnemy : MonoBehaviour
         if (Time.timeSinceLevelLoad > nextActionTime)
 	    {
 	        nextActionTime += period;
-	        Instantiate(Obstacles[Random.Range(0, Obstacles.Length)], new Vector3(25, Random.Range(-4, 4), 1), new Quaternion(0, 0, 0, 0)); //Vector 3 = position aléatoire sur l'axe y
+	        Instantiate(Obstacles[Random.Range(0, Obstacles.Length)], new Vector3(25 , Random.Range(-4, 4), 6), new Quaternion(0, 0, 0, 0)); //Vector 3 = position aléatoire sur l'axe y
 	        if (period > 1)
 	        {
 	            period /= 1.5f;

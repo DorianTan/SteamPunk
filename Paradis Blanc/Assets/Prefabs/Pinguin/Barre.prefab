@@ -23,14 +23,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4324543000356915215}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.04, y: 0.13, z: -0.0036282835}
+  m_LocalRotation: {x: 0.0025223591, y: -0.008360588, z: -0.12098579, w: 0.9926158}
+  m_LocalPosition: {x: 7.04, y: 0.13, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4324543000576615888}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.171, y: -0.98600006, z: -13.9}
 --- !u!1 &4324543000576615891
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,9 +41,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4324543000576615888}
   - component: {fileID: 4324543000576615886}
-  - component: {fileID: 4324543000576615889}
-  - component: {fileID: 4324543000576615887}
-  - component: {fileID: 8900774743622832800}
+  - component: {fileID: 3944587959321549526}
+  - component: {fileID: 3453038713195409203}
+  - component: {fileID: 4649066454845715898}
+  - component: {fileID: 7057184815047286240}
   m_Layer: 0
   m_Name: bar
   m_TagString: Metal
@@ -99,8 +100,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1929420775
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cd826fd3d2b4aa845af0819c65f5c8d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -113,7 +114,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &4324543000576615889
+--- !u!60 &3944587959321549526
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,9 +124,9 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,7 +219,291 @@ PolygonCollider2D:
       - {x: -1.9699999, y: -1.02}
       - {x: -1.87, y: -0.98999995}
       - {x: -1.79, y: -0.96999997}
---- !u!114 &4324543000576615887
+--- !u!50 &3453038713195409203
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4324543000576615891}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!66 &4649066454845715898
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4324543000576615891}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 3944587959321549526}
+    m_ColliderPaths:
+    - - X: -16197412
+        Y: -9198861
+      - X: -15097569
+        Y: -8898931
+      - X: -13397815
+        Y: -8399038
+      - X: -10898175
+        Y: -7699196
+      - X: -9898318
+        Y: -7399260
+      - X: -8198564
+        Y: -6899369
+      - X: -4599080
+        Y: -5899595
+      - X: -2899325
+        Y: -5399703
+      - X: 600170
+        Y: -4399925
+      - X: 2399912
+        Y: -3900038
+      - X: 3399768
+        Y: -3600101
+      - X: 5199509
+        Y: -3100215
+      - X: 12898401
+        Y: -900702
+      - X: 13998244
+        Y: -600772
+      - X: 17397754
+        Y: 399012
+      - X: 19897396
+        Y: 1098854
+      - X: 20897250
+        Y: 1398790
+      - X: 21997094
+        Y: 1698721
+      - X: 22597006
+        Y: 1898682
+      - X: 23396892
+        Y: 2098632
+      - X: 24096790
+        Y: 2298588
+      - X: 24896676
+        Y: 2498538
+      - X: 25396592
+        Y: 2898500
+      - X: 25496520
+        Y: 3898470
+      - X: 25196530
+        Y: 4398474
+      - X: 24696590
+        Y: 4498500
+      - X: 23296748
+        Y: 4898569
+      - X: 22196866
+        Y: 5298621
+      - X: 22896710
+        Y: 6498552
+      - X: 23596606
+        Y: 6698507
+      - X: 24896424
+        Y: 6998427
+      - X: 25396340
+        Y: 7398389
+      - X: 25396266
+        Y: 8698357
+      - X: 24896306
+        Y: 9098375
+      - X: 22696560
+        Y: 9598486
+      - X: 21696658
+        Y: 10098530
+      - X: 20396826
+        Y: 10098603
+      - X: 15897479
+        Y: 8698891
+      - X: 14197724
+        Y: 8198999
+      - X: 11598095
+        Y: 7499162
+      - X: 6298857
+        Y: 5999497
+      - X: 4499115
+        Y: 5499611
+      - X: 3399273
+        Y: 5199679
+      - X: -1899965
+        Y: 3700015
+      - X: -2999807
+        Y: 3400084
+      - X: -5399461
+        Y: 2700236
+      - X: -7199203
+        Y: 2200350
+      - X: -8898958
+        Y: 1700458
+      - X: -10098788
+        Y: 1400533
+      - X: -10998657
+        Y: 1100591
+      - X: -12598429
+        Y: 700690
+      - X: -14598140
+        Y: 100818
+      - X: -16397882
+        Y: -399068
+      - X: -18497580
+        Y: -998935
+      - X: -19697408
+        Y: -1298860
+      - X: -20597276
+        Y: -1598802
+      - X: -22696974
+        Y: -2198669
+      - X: -24096778
+        Y: -2498583
+      - X: -25096636
+        Y: -2798520
+      - X: -25296588
+        Y: -3198498
+      - X: -25396514
+        Y: -4298466
+      - X: -25096536
+        Y: -4598475
+      - X: -24196632
+        Y: -4898518
+      - X: -21996874
+        Y: -5598625
+      - X: -21996836
+        Y: -6298607
+      - X: -21896824
+        Y: -6698603
+      - X: -22596724
+        Y: -6898559
+      - X: -23296628
+        Y: -6998517
+      - X: -24196496
+        Y: -7298459
+      - X: -24496444
+        Y: -7598435
+      - X: -24596372
+        Y: -8598404
+      - X: -24596362
+        Y: -8798400
+      - X: -24196388
+        Y: -9198412
+      - X: -23496466
+        Y: -9398447
+      - X: -22596566
+        Y: -9698489
+      - X: -20696768
+        Y: -10398579
+      - X: -20196834
+        Y: -10398607
+      - X: -19696908
+        Y: -10198640
+      - X: -18697054
+        Y: -9898704
+      - X: -17897168
+        Y: -9698753
+  m_CompositePaths:
+    m_Paths:
+    - - {x: -1.9696908, y: -1.019864}
+      - {x: -1.8697054, y: -0.9898704}
+      - {x: -1.7897168, y: -0.96987534}
+      - {x: -1.6197412, y: -0.9198861}
+      - {x: -1.5097569, y: -0.8898931}
+      - {x: -1.3397815, y: -0.83990383}
+      - {x: -1.0898175, y: -0.76991963}
+      - {x: -0.9898318, y: -0.739926}
+      - {x: -0.8198564, y: -0.68993694}
+      - {x: -0.459908, y: -0.5899595}
+      - {x: -0.2899325, y: -0.5399703}
+      - {x: 0.060017, y: -0.43999252}
+      - {x: 0.2399912, y: -0.3900038}
+      - {x: 0.33997682, y: -0.36001012}
+      - {x: 0.5199509, y: -0.3100215}
+      - {x: 1.2898401, y: -0.0900702}
+      - {x: 1.3998244, y: -0.0600772}
+      - {x: 1.7397754, y: 0.0399012}
+      - {x: 1.9897397, y: 0.1098854}
+      - {x: 2.089725, y: 0.139879}
+      - {x: 2.1997094, y: 0.1698721}
+      - {x: 2.2597005, y: 0.1898682}
+      - {x: 2.3396893, y: 0.2098632}
+      - {x: 2.409679, y: 0.2298588}
+      - {x: 2.4896677, y: 0.2498538}
+      - {x: 2.5396593, y: 0.28985}
+      - {x: 2.549652, y: 0.389847}
+      - {x: 2.519653, y: 0.4398474}
+      - {x: 2.469659, y: 0.44985}
+      - {x: 2.3296747, y: 0.4898569}
+      - {x: 2.2196865, y: 0.5298621}
+      - {x: 2.289671, y: 0.6498552}
+      - {x: 2.3596606, y: 0.6698507}
+      - {x: 2.4896424, y: 0.6998427}
+      - {x: 2.539634, y: 0.7398389}
+      - {x: 2.5396266, y: 0.86983573}
+      - {x: 2.4896307, y: 0.9098375}
+      - {x: 2.269656, y: 0.9598486}
+      - {x: 2.1696658, y: 1.009853}
+      - {x: 2.0396826, y: 1.0098603}
+      - {x: 1.5897479, y: 0.8698891}
+      - {x: 1.4197724, y: 0.8198999}
+      - {x: 1.1598095, y: 0.7499162}
+      - {x: 0.62988573, y: 0.5999497}
+      - {x: 0.4499115, y: 0.5499611}
+      - {x: 0.33992732, y: 0.5199679}
+      - {x: -0.1899965, y: 0.3700015}
+      - {x: -0.2999807, y: 0.3400084}
+      - {x: -0.5399461, y: 0.2700236}
+      - {x: -0.71992034, y: 0.220035}
+      - {x: -0.8898958, y: 0.17004581}
+      - {x: -1.0098788, y: 0.1400533}
+      - {x: -1.0998657, y: 0.110059105}
+      - {x: -1.2598429, y: 0.070069}
+      - {x: -1.4598141, y: 0.0100818}
+      - {x: -1.6397883, y: -0.0399068}
+      - {x: -1.849758, y: -0.0998935}
+      - {x: -1.9697409, y: -0.129886}
+      - {x: -2.0597277, y: -0.1598802}
+      - {x: -2.2696974, y: -0.2198669}
+      - {x: -2.4096777, y: -0.2498583}
+      - {x: -2.5096636, y: -0.279852}
+      - {x: -2.5296588, y: -0.3198498}
+      - {x: -2.5396514, y: -0.4298466}
+      - {x: -2.5096536, y: -0.4598475}
+      - {x: -2.4196632, y: -0.4898518}
+      - {x: -2.1996875, y: -0.5598625}
+      - {x: -2.1996837, y: -0.6298607}
+      - {x: -2.1896825, y: -0.6698603}
+      - {x: -2.2596724, y: -0.68985593}
+      - {x: -2.3296628, y: -0.6998517}
+      - {x: -2.4196496, y: -0.7298459}
+      - {x: -2.4496443, y: -0.7598435}
+      - {x: -2.4596372, y: -0.8598404}
+      - {x: -2.4596362, y: -0.87984}
+      - {x: -2.4196389, y: -0.91984123}
+      - {x: -2.3496466, y: -0.9398447}
+      - {x: -2.2596567, y: -0.96984893}
+      - {x: -2.0696769, y: -1.0398579}
+      - {x: -2.0196834, y: -1.0398607}
+  m_VertexDistance: 0.0005
+--- !u!114 &7057184815047286240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,100 +515,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9d140df0abbb30479b0f770523fee5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &8900774743622832800
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4324543000576615891}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243806453552360446, guid: bdd5d9dc60fab46459e7c9c5c2fc772b,
-    type: 2}
-  m_audioClip: {fileID: 8300000, guid: 11473741a81ba324e8b304c13749c416, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
