@@ -18,7 +18,12 @@ public class Obstacles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position = new Vector3(transform.position.x - (MapManager.Instance.Speed * Time.deltaTime), transform.position.y,transform.position.z); // deplacement des obstacles
+
+        if (transform.position.x <= -40)
+        {
+            Destroy(gameObject);// destruction sortie de l'ecran
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)

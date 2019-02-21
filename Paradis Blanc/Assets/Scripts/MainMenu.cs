@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
 
     public void BtnStart()
     {
-        SceneManager.LoadScene("Scenes/MainScene");
+        SceneManager.LoadScene("Scenes/SteamPunk/Dorian");
         Time.timeScale = 1f;
     }
 
