@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Pinguin/MainMenu.unity
-    guid: 2176c76fcf3efd94ba7dd80eec515271
+    path: Assets/Scenes/SteamPunk/MainMenu.unity
+    guid: c9dd3ebc42a039f48833494085d1e88f
   - enabled: 1
-    path: Assets/Scenes/Pinguin/MainScene.unity
-    guid: 6739d97e9c0089647adbada8627cffe7
+    path: Assets/Scenes/SteamPunk/Dorian.unity
+    guid: 3f6324df39ab8c548bd77f5bd3f9a0e4
   m_configObjects: {}
