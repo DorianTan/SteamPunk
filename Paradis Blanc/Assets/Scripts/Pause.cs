@@ -33,12 +33,12 @@ public class Pause : MonoBehaviour
     public void Retry()
     {
         Toggle(); //être sûr que le temps est arrêter
-        SceneManager.LoadScene("Scenes/MainScene");
+        SceneManager.LoadScene("Scenes/SteamPunk/Dorian");
 
     }
 
     public void Menu()
     {
-        SceneManager.LoadScene("Scenes/MainMenu");
+        SceneManager.LoadScene("Scenes/SteamPunk/MainMenu");
     }
 }
