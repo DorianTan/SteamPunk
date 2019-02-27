@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
 
     [SerializeField] private Slider airSlider;
+    [SerializeField] private CanvasGroup UIelement;
 
     [SerializeField] private GameObject postprocessGameObject;
     [SerializeField] private GameObject warning;
@@ -23,6 +24,7 @@ public class UIManager : MonoBehaviour
     {
         airSlider.maxValue = GameManager.Instance.Player.AirMax;
         airSlider.value = GameManager.Instance.Player.ActualAir;
+        UIelement.alpha = airSlider.value / 10;
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -30,6 +32,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         airSlider.value = GameManager.Instance.Player.ActualAir;
+        UIelement.alpha = airSlider.value / 10;
         if (GameManager.Instance.Player.ActualAir <= GameManager.Instance.Player.AirMax * (pourcentageBloomActivation/100))
         {
             postprocessGameObject.SetActive(true);
