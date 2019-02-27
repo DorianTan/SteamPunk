@@ -2290,6 +2290,7 @@ GameObject:
   - component: {fileID: 1396859127}
   - component: {fileID: 1396859129}
   - component: {fileID: 1396859130}
+  - component: {fileID: 1396859132}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2359,6 +2360,23 @@ MonoBehaviour:
   - {fileID: 2724673567061773798, guid: 8ba00cf2dfdb6c546b965602d6c2802d, type: 3}
   - {fileID: 8725308513543020716, guid: 8e3679b4561c9a94bb730ed3843e426a, type: 3}
   mapSize: 33
+--- !u!114 &1396859132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396859126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390022aeca8853344a8fe09789f1bfdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Carburants:
+  - {fileID: 5240631543538555376, guid: 8f6660b3563815446829aaaee5f7a4d3, type: 3}
+  - {fileID: 3283862924366129405, guid: db22608e4490a48409db9fb36a3d8301, type: 3}
+  nextActionTime: 2
+  period: 2
 --- !u!1 &1409674712
 GameObject:
   m_ObjectHideFlags: 0
