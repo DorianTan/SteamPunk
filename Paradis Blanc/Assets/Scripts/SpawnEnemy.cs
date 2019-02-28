@@ -20,8 +20,9 @@ public class SpawnEnemy : MonoBehaviour
 	void Update ()
 	{
         if (Time.timeSinceLevelLoad > nextActionTime)
-	    {
-            if (gameObject.tag=="ObstaclesBas")
+        {  
+            int random =Random.Range(0,2);
+            if (random==0)
             {
                 nextActionTime += period;
 	            Instantiate(ObstaclesBas[Random.Range(0, ObstaclesBas.Length)], new Vector3(25 ,-3, -11), new Quaternion(0, 0, 0, 0)); //Vector 3 = position aléatoire sur l'axe x
@@ -38,8 +39,24 @@ public class SpawnEnemy : MonoBehaviour
 	            period -= 0.01f;
 	            }
             }
-	      
-	    }
+            else
+            {
+                nextActionTime += period;
+	            Instantiate(ObstaclesHaut[Random.Range(0, ObstaclesHaut.Length)], new Vector3(25, 3, -11), new Quaternion(0, 0, 0, 0)); //Vector 3 = position aléatoire sur l'axe x
+	            if (transform.position.x <= -40)
+	            {
+	                Destroy(gameObject); // destruction sortie de l'ecran
+	            }
+	            if (period > 1)
+	            {
+	                period /= 1.5f;
+	            }
+	            else
+	            {
+	                period -= 0.01f;
+	            }
+            }
+        }
 	   
     }
 

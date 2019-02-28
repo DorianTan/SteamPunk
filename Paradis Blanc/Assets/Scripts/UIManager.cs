@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
     {
         CarburantSlider.maxValue = GameManager.Instance.Player.AirMax;
         CarburantSlider.value = GameManager.Instance.Player.ActualAir;
-        UIelement.alpha = CarburantSlider.value / 10;
+        UIelement.alpha = 1-(CarburantSlider.value / 10);
         Carburant.fillAmount = CarburantSlider.value/10;
         audioSource = GetComponent<AudioSource>();
     }
@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
     {
         CarburantSlider.value = GameManager.Instance.Player.ActualAir;
         
-        UIelement.alpha = CarburantSlider.value / 10;
+        UIelement.alpha = 1-(CarburantSlider.value / 10);
         Carburant.fillAmount = CarburantSlider.value / 10;
         if (GameManager.Instance.Player.ActualAir <= GameManager.Instance.Player.AirMax * (pourcentageBloomActivation/100))
         {
@@ -49,7 +49,7 @@ public class UIManager : MonoBehaviour
             
         }
         else
-        {Debug.Log("fkjdd");
+        {
             postprocessGameObject.SetActive(false);
             warning.SetActive(false);
             audioSource.Stop();

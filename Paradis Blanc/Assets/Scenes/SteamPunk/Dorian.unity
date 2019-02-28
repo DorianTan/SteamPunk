@@ -1950,7 +1950,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!225 &1241168691
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1959,7 +1959,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241168690}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0.4
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -2183,7 +2183,7 @@ MonoBehaviour:
   - {fileID: 3283862924366129405, guid: db22608e4490a48409db9fb36a3d8301, type: 3}
   - {fileID: 5240631543538555376, guid: 8f6660b3563815446829aaaee5f7a4d3, type: 3}
   nextActionTime: 2
-  period: 2
+  period: 5
 --- !u!114 &1320169907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2217,9 +2217,12 @@ MonoBehaviour:
   - {fileID: 901736813790078509, guid: 1855d7c0a2c36044cbd11ae0d4735261, type: 3}
   - {fileID: 4475753732822918807, guid: a9e8b650e835f984d9d2e39684fe5c7e, type: 3}
   - {fileID: 3453218096127569140, guid: a618ae259e8dae24584f90d22212a1bf, type: 3}
-  ObstaclesHaut: []
+  ObstaclesHaut:
+  - {fileID: 5003068601864947573, guid: 81055bb6c3f994342b13946fad2dfa62, type: 3}
+  - {fileID: 5218960132687020554, guid: a88e33e2c7c3a9849bec9bee2af88aa1, type: 3}
+  - {fileID: 2127345374832921011, guid: 36a83c0784426354ab148bfb2e42f0b8, type: 3}
   nextActionTime: 2
-  period: 2
+  period: 10
 --- !u!4 &1320169909
 Transform:
   m_ObjectHideFlags: 0
@@ -3000,7 +3003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 971111215, guid: 5846150b27f168b4d95a8956479279f9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -11.69
       objectReference: {fileID: 0}
     - target: {fileID: 971111215, guid: 5846150b27f168b4d95a8956479279f9, type: 3}
       propertyPath: m_LocalRotation.x
