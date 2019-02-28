@@ -90,20 +90,13 @@ public class PlayerMouvement : MonoBehaviour
         spriteRenderer.color = Color.white;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Surface"))
+        if (other.gameObject.CompareTag("Carburant"))
         {
             actualAir = airMax;
+            Destroy(other.gameObject);
             audioSource.PlayOneShot(breath);
-        }
-    }
-
-    private void OnCollisionStay2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Surface"))
-        {
-            actualAir = airMax;
         }
     }
 }

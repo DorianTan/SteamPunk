@@ -26,7 +26,7 @@ public class Obstacles : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
         if (!GameManager.Instance.Player.Invincibility)
         {

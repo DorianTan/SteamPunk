@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
 
-    [SerializeField] private Slider airSlider;
+    [SerializeField] private Slider CarburantSlider;
+    [SerializeField] private CanvasGroup UIelement;
+    [SerializeField] private Image Carburant;
 
     [SerializeField] private GameObject postprocessGameObject;
     [SerializeField] private GameObject warning;
@@ -21,17 +23,23 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        airSlider.maxValue = GameManager.Instance.Player.AirMax;
-        airSlider.value = GameManager.Instance.Player.ActualAir;
+        CarburantSlider.maxValue = GameManager.Instance.Player.AirMax;
+        CarburantSlider.value = GameManager.Instance.Player.ActualAir;
+        UIelement.alpha = 1-(CarburantSlider.value / 10);
+        Carburant.fillAmount = CarburantSlider.value/10;
         audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        airSlider.value = GameManager.Instance.Player.ActualAir;
+        CarburantSlider.value = GameManager.Instance.Player.ActualAir;
+        
+        UIelement.alpha = 1-(CarburantSlider.value / 10);
+        Carburant.fillAmount = CarburantSlider.value / 10;
         if (GameManager.Instance.Player.ActualAir <= GameManager.Instance.Player.AirMax * (pourcentageBloomActivation/100))
         {
+            
             postprocessGameObject.SetActive(true);
             warning.SetActive(true);
             if (!audioSource.isPlaying)
