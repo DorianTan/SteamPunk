@@ -10,6 +10,7 @@ TagManager:
   - Plastic
   - ObstaclesBas
   - ObstaclesHaut
+  - Carburant
   layers:
   - Default
   - TransparentFX

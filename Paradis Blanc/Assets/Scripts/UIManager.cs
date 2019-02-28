@@ -34,10 +34,12 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         CarburantSlider.value = GameManager.Instance.Player.ActualAir;
+        
         UIelement.alpha = CarburantSlider.value / 10;
         Carburant.fillAmount = CarburantSlider.value / 10;
         if (GameManager.Instance.Player.ActualAir <= GameManager.Instance.Player.AirMax * (pourcentageBloomActivation/100))
         {
+            
             postprocessGameObject.SetActive(true);
             warning.SetActive(true);
             if (!audioSource.isPlaying)
@@ -47,7 +49,7 @@ public class UIManager : MonoBehaviour
             
         }
         else
-        {
+        {Debug.Log("fkjdd");
             postprocessGameObject.SetActive(false);
             warning.SetActive(false);
             audioSource.Stop();
