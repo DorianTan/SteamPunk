@@ -8,6 +8,8 @@ TagManager:
   - Surface
   - Metal
   - Plastic
+  - ObstaclesBas
+  - ObstaclesHaut
   layers:
   - Default
   - TransparentFX

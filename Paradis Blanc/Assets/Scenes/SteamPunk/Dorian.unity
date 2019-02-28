@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 222464934}
   - component: {fileID: 222464933}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: RetryBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -509,7 +509,7 @@ RectTransform:
   m_Children:
   - {fileID: 2103278791}
   m_Father: {fileID: 1089654227}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1174,7 +1174,7 @@ GameObject:
   - component: {fileID: 670947114}
   - component: {fileID: 670947113}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ResumeBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1761,8 +1761,8 @@ RectTransform:
   m_Children:
   - {fileID: 1168014276}
   - {fileID: 670947112}
-  - {fileID: 1934631775}
   - {fileID: 222464932}
+  - {fileID: 1934631775}
   m_Father: {fileID: 579704511}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2338,9 +2338,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6ae0ed316429444a8f1b69e98f94e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obstacles:
-  - {fileID: 4324543000356915215, guid: 0060fc8ffae266d479b8f93bdde68ec0, type: 3}
-  - {fileID: 3302649532013055782, guid: 382cbcedc416ddd4693804d5f769ba5e, type: 3}
+  ObstaclesBas:
+  - {fileID: 901736813790078509, guid: 1855d7c0a2c36044cbd11ae0d4735261, type: 3}
+  - {fileID: 4475753732822918807, guid: a9e8b650e835f984d9d2e39684fe5c7e, type: 3}
+  - {fileID: 3453218096127569140, guid: a618ae259e8dae24584f90d22212a1bf, type: 3}
+  ObstaclesHaut: []
   nextActionTime: 2
   period: 2
 --- !u!114 &1396859130
@@ -3575,7 +3577,7 @@ GameObject:
   - component: {fileID: 1934631777}
   - component: {fileID: 1934631776}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: MenuBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3594,7 +3596,7 @@ RectTransform:
   m_Children:
   - {fileID: 1934460844}
   m_Father: {fileID: 1089654227}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
