@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Obstacles : MonoBehaviour
 {
-    private AudioSource MetalSound;
-    private AudioSource PlasticSound;
+  //  private AudioSource MetalSound;
+    private AudioSource RockSound;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        MetalSound = GetComponent<AudioSource>();
-        PlasticSound = GetComponent<AudioSource>();
+        //MetalSound = GetComponent<AudioSource>();
+        RockSound = GetComponent<AudioSource>();
 
     }
 
@@ -31,16 +31,16 @@ public class Obstacles : MonoBehaviour
     {
         if (!GameManager.Instance.Player.Invincibility)
         {
-            
+            RockSound.Play();
             LivesManagement.Instance.Health -= 1;
-            if (col.gameObject.tag == "Metal")
-            {
-                MetalSound.Play();
-            }
-            else
-            {
-                PlasticSound.Play();
-            }
+            //if (col.gameObject.tag == "Metal")
+            //{
+            //    MetalSound.Play();
+            //}
+            //else
+            //{
+
+            //}
         }
     }
 }

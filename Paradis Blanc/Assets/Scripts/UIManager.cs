@@ -14,8 +14,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject warning;
 
     [SerializeField] private GameObject endPanel;
-
-    private AudioSource audioSource;
     
 
     [SerializeField] private float pourcentageBloomActivation; // pourcentage à partir dulequel le bloom s'active
@@ -27,7 +25,6 @@ public class UIManager : MonoBehaviour
         CarburantSlider.value = GameManager.Instance.Player.ActualAir;
         UIelement.alpha = 1-(CarburantSlider.value / 10);
         Carburant.fillAmount = CarburantSlider.value/10;
-        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,29 +39,23 @@ public class UIManager : MonoBehaviour
             
             postprocessGameObject.SetActive(true);
             warning.SetActive(true);
-            if (!audioSource.isPlaying)
-            {
-                audioSource.Play();
-            }
+            
             
         }
         else
         {
             postprocessGameObject.SetActive(false);
             warning.SetActive(false);
-            audioSource.Stop();
+           
         }
 
         if (GameManager.Instance.end)
         {
             endPanel.SetActive(true);
-            audioSource.Stop();
+            
         }
 
-        if (LivesManagement.Instance.Health <= 0)
-        {
-            audioSource.Stop();
-        }
+       
     }
     
     

@@ -16,15 +16,14 @@ public class PlayerMouvement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float maxSpeed;
 
-    [SerializeField] private float airMax; // Comme les chaussures XD   réponse: t'es sérieux ? XD
+    [SerializeField] private float airMax;
     public float AirMax => airMax;
     
     [SerializeField] private float decreaseAir;
     private float actualAir;
     public float ActualAir => actualAir;
 
-    private AudioSource audioSource;
-    [SerializeField] private AudioClip breath;
+    private AudioSource CarburantSound;
 
     public CameraShake CameraShake;
 
@@ -32,7 +31,7 @@ public class PlayerMouvement : MonoBehaviour
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        audioSource = GetComponent<AudioSource>();
+        CarburantSound = GetComponent<AudioSource>();
         actualAir = airMax;
     }
     
@@ -97,8 +96,8 @@ public class PlayerMouvement : MonoBehaviour
         if (other.gameObject.CompareTag("Carburant"))
         {
             actualAir = airMax;
+            CarburantSound.Play();
             Destroy(other.gameObject);
-            audioSource.PlayOneShot(breath);
         }
     }
 
@@ -106,7 +105,6 @@ public class PlayerMouvement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacles"))
         {
-            Debug.Log("camera shake");
             StartCoroutine( CameraShake.Shake(.15f,.4f));
         }
     }
