@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Pause : MonoBehaviour
 {
     public GameObject ui;
+    public GameObject PauseBtn;
+    public GameObject PlayBtn;
 
     // Update is called once per frame
     void Update()
@@ -23,10 +25,14 @@ public class Pause : MonoBehaviour
         if (ui.activeSelf)
         {
             Time.timeScale = 0f;
+            PlayBtn.gameObject.SetActive(true);
+            PauseBtn.gameObject.SetActive(false);
         }
         else
         {
             Time.timeScale = 1f;
+            PauseBtn.gameObject.SetActive(true);
+            PlayBtn.gameObject.SetActive(false);
         }
     }
 

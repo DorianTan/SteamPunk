@@ -14,7 +14,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject warning;
 
     [SerializeField] private GameObject endPanel;
-    
 
     [SerializeField] private float pourcentageBloomActivation; // pourcentage à partir dulequel le bloom s'active
 
