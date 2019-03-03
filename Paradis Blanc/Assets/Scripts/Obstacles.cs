@@ -6,6 +6,7 @@ public class Obstacles : MonoBehaviour
 {
     private AudioSource MetalSound;
     private AudioSource PlasticSound;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class Obstacles : MonoBehaviour
     {
         if (!GameManager.Instance.Player.Invincibility)
         {
+            
             LivesManagement.Instance.Health -= 1;
             if (col.gameObject.tag == "Metal")
             {

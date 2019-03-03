@@ -11,6 +11,7 @@ TagManager:
   - ObstaclesBas
   - ObstaclesHaut
   - Carburant
+  - Obstacles
   layers:
   - Default
   - TransparentFX

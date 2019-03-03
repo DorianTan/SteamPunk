@@ -25,7 +25,9 @@ public class PlayerMouvement : MonoBehaviour
 
     private AudioSource audioSource;
     [SerializeField] private AudioClip breath;
-    
+
+    public CameraShake CameraShake;
+
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -48,10 +50,10 @@ public class PlayerMouvement : MonoBehaviour
 
         if (rigidbody2D.velocity.y > 2)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 45);
+            transform.rotation = Quaternion.Euler(0, 0, 10);
         } else if (rigidbody2D.velocity.y < -2)
         {
-            transform.rotation = Quaternion.Euler(0, 0, -45);
+            transform.rotation = Quaternion.Euler(0, 0, -10);
 
         }
         else
@@ -97,6 +99,15 @@ public class PlayerMouvement : MonoBehaviour
             actualAir = airMax;
             Destroy(other.gameObject);
             audioSource.PlayOneShot(breath);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Obstacles"))
+        {
+            Debug.Log("camera shake");
+            StartCoroutine( CameraShake.Shake(.15f,.4f));
         }
     }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6709789131759322992}
   m_Layer: 0
   m_Name: Obstacles3Bas
-  m_TagString: ObstaclesBas
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,6 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9d140df0abbb30479b0f770523fee5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraShake: {fileID: 0}
 --- !u!1 &8967719395412168145
 GameObject:
   m_ObjectHideFlags: 0
