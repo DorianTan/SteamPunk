@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SetupScene();
+
     }
 
     void SetupScene() // initialise le niveau
@@ -66,9 +67,9 @@ public class GameManager : MonoBehaviour
         end = false;
     }
 
-    public void End()
-    {
-        Time.timeScale = 0;
-        end = true;
-    }
+    //public void End()
+    //{
+    //    Time.timeScale = 0;
+    //    end = true;
+    //}
 }

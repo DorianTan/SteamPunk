@@ -22,7 +22,7 @@ public class Iceberg : MonoBehaviour
 
     public void End()
     {
-        GameManager.Instance.End();
+        //GameManager.Instance.End();
     }
 
     private void OnTriggerEnter2D(Collider2D other)

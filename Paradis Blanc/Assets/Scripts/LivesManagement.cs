@@ -78,10 +78,8 @@ public class LivesManagement : MonoBehaviour
                 lives3.gameObject.SetActive(true);
                 break;
             case 2:
-                Debug.Log("2 vies");
                 //lives1.gameObject.SetActive(false);
                 lives1.GetComponent<Animator>().SetTrigger("Break");
-                Debug.Log("casser");
                 break;
             case 1:
                 lives1.gameObject.SetActive(false);
@@ -94,7 +92,12 @@ public class LivesManagement : MonoBehaviour
                 lives3.GetComponent<Animator>().SetTrigger("Break");
                 //lives3.gameObject.SetActive(false);
                 UIMort.gameObject.SetActive(true);
-                Time.timeScale = 0f;
+                GameManager.Instance.Player.enabled = false;
+                GameManager.Instance.Player.GetComponent<Rigidbody2D>().isKinematic = true;
+                MapManager.Instance.Speed = 0;
+                MapManager.Instance.GetComponent<SpawnEnemy>().enabled = false;
+                MapManager.Instance.GetComponent<SpawnCarburant>().enabled = false;
+                GameManager.Instance.Player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                 break;
         }
     }

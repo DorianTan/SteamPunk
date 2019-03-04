@@ -47,14 +47,11 @@ public class SpawnEnemy : MonoBehaviour
 	            {
 	                Destroy(gameObject); // destruction sortie de l'ecran
 	            }
-	            if (period > 1)
+	            if (period > 0.5)
 	            {
 	                period /= 1.5f;
 	            }
-	            else
-	            {
-	                period -= 0.01f;
-	            }
+	           
             }
         }
 	   

@@ -2197,7 +2197,7 @@ MonoBehaviour:
   - {fileID: 8494480593419754069, guid: a88e33e2c7c3a9849bec9bee2af88aa1, type: 3}
   - {fileID: 3406171325332513768, guid: 36a83c0784426354ab148bfb2e42f0b8, type: 3}
   nextActionTime: 2
-  period: 20
+  period: 15
 --- !u!4 &1320169909
 Transform:
   m_ObjectHideFlags: 0
