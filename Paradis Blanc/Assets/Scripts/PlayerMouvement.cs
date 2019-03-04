@@ -24,7 +24,7 @@ public class PlayerMouvement : MonoBehaviour
     public float ActualAir => actualAir;
 
     private AudioSource CarburantSound;
-
+       
     public CameraShake CameraShake;
 
     void Start()
@@ -105,7 +105,8 @@ public class PlayerMouvement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacles"))
         {
-            StartCoroutine( CameraShake.Shake(.15f,.4f));
+            CameraShake.ShakeFonction(.15f,.4f);
+
         }
     }
 }

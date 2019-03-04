@@ -15,7 +15,7 @@ public class BackGround : MonoBehaviour
     {
         transform.position = new Vector3(transform.position.x-(MapManager.Instance.Speed*Time.deltaTime), transform.position.y, transform.position.z); // deplacement du background
 
-        if (transform.position.x <= -40)
+        if (transform.position.x <= -60)
         {
             Destroy(gameObject);// destruction sortie de l'ecran
         }

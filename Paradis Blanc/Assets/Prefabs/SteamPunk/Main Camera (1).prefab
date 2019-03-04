@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 971111213}
   - component: {fileID: 971111212}
   - component: {fileID: 971111211}
+  - component: {fileID: 2396162686156380571}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -276,6 +277,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2396162686156380571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971111210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff1b043829e9bc48b75f27504a970ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1056600155
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,7 +480,7 @@ MonoBehaviour:
   maxSpeed: 3.5
   airMax: 10
   decreaseAir: 0.7
-  breath: {fileID: 8300000, guid: 43986d7c1b62d3242a501b0269cb3d20, type: 3}
+  CameraShake: {fileID: 0}
 --- !u!50 &1916423989
 Rigidbody2D:
   serializedVersion: 4
