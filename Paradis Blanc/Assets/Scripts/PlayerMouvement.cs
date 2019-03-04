@@ -6,12 +6,21 @@ public class PlayerMouvement : MonoBehaviour
 {
     private Rigidbody2D rigidbody2D;
     private SpriteRenderer spriteRenderer;
+    private SpriteRenderer lightSprite;
+    private SpriteRenderer lightSprite2;
+    private SpriteRenderer lightSprite3;
+
 
     [SerializeField] private Color invincibilityColor;
+    [SerializeField] private Color invincibilityColorLight;
+    [SerializeField] private Color ColorLight;
     [SerializeField] private float invincibilityTime;
     [SerializeField] private bool invincibilityShake;
     private bool invincibility;
     public bool Invincibility => invincibility;
+    [SerializeField] private GameObject Light;
+    [SerializeField] private GameObject Light2;
+    [SerializeField] private GameObject Light3;
 
     [SerializeField] private float speed;
     [SerializeField] private float maxSpeed;
@@ -33,6 +42,9 @@ public class PlayerMouvement : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         CarburantSound = GetComponent<AudioSource>();
         actualAir = airMax;
+        lightSprite = Light.GetComponentInChildren<SpriteRenderer>();
+        lightSprite2 = Light2.GetComponentInChildren<SpriteRenderer>();
+        lightSprite3 = Light3.GetComponentInChildren<SpriteRenderer>();
     }
     
     void Update()
@@ -82,6 +94,9 @@ public class PlayerMouvement : MonoBehaviour
     public IEnumerator InvincibilityCouroutine()
     {
         spriteRenderer.color = invincibilityColor;
+        lightSprite.color = invincibilityColorLight;
+        lightSprite2.color = invincibilityColorLight;
+        lightSprite3.color = invincibilityColorLight;
         invincibility = true;
         GameManager.Instance.Speed /= 2;
         yield return new WaitForSeconds(1);
@@ -89,6 +104,9 @@ public class PlayerMouvement : MonoBehaviour
         yield return new WaitForSeconds(invincibilityTime);
         invincibility = false;
         spriteRenderer.color = Color.white;
+        lightSprite.color = ColorLight;
+        lightSprite2.color = ColorLight;
+        lightSprite3.color = ColorLight;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
