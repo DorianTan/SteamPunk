@@ -28,14 +28,6 @@ public class SpawnCarburant : MonoBehaviour
             {
                 Destroy(gameObject);// destruction sortie de l'ecran
             }
-            if (period > 1)
-            {
-                period /= 1.5f;
-            }
-            else
-            {
-                period -= 0.01f;
-            }
         }
     }
 }

@@ -42,12 +42,12 @@ public class SpawnEnemy : MonoBehaviour
             else
             {
                 nextActionTime += period;
-	            Instantiate(ObstaclesHaut[Random.Range(0, ObstaclesHaut.Length)], new Vector3(25, 3, -11), new Quaternion(0, 0, 0, 0)); //Vector 3 = position aléatoire sur l'axe x
+	            Instantiate(ObstaclesHaut[Random.Range(0, ObstaclesHaut.Length)], new Vector3(25, 4, -11), new Quaternion(0, 0, 0, 0)); //Vector 3 = position aléatoire sur l'axe x
 	            if (transform.position.x <= -40)
 	            {
 	                Destroy(gameObject); // destruction sortie de l'ecran
 	            }
-	            if (period > 0.5)
+	            if (period >0.5)
 	            {
 	                period /= 1.5f;
 	            }

@@ -1321,15 +1321,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.36169454, g: 0.6037736, b: 0.5817664, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e86d7633ba8a2ca4293301bcb256e8a8, type: 3}
-  m_Type: 2
+  m_Sprite: {fileID: 21300000, guid: 1c87ef553148bd14694eb69d9367302b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2255,7 +2255,7 @@ MonoBehaviour:
   speed: 5
   mapPrefab:
   - {fileID: 2724673567061773798, guid: 8ba00cf2dfdb6c546b965602d6c2802d, type: 3}
-  - {fileID: 8725308513543020716, guid: 8e3679b4561c9a94bb730ed3843e426a, type: 3}
+  - {fileID: 2724673567061773798, guid: 8ba00cf2dfdb6c546b965602d6c2802d, type: 3}
   mapSize: 78
 --- !u!114 &1320169908
 MonoBehaviour:
@@ -2278,7 +2278,7 @@ MonoBehaviour:
   - {fileID: 8494480593419754069, guid: a88e33e2c7c3a9849bec9bee2af88aa1, type: 3}
   - {fileID: 3406171325332513768, guid: 36a83c0784426354ab148bfb2e42f0b8, type: 3}
   nextActionTime: 2
-  period: 15
+  period: 20
 --- !u!4 &1320169909
 Transform:
   m_ObjectHideFlags: 0
@@ -2914,15 +2914,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.19845459, b: 0.6320754, a: 1}
+  m_Color: {r: 0.4716981, g: 0, b: 0.06659256, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7d440d872ec2e2149912a9a69009bf7f, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 1c87ef553148bd14694eb69d9367302b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4462,7 +4462,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 68.7
+  m_Value: 75
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4572,7 +4572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.07843137, g: 1, b: 0.94478285, a: 1}
+  m_Color: {r: 0.36078432, g: 0.6039216, b: 0.5803922, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4700,7 +4700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.07843137, g: 1, b: 0.94478285, a: 1}
+  m_Color: {r: 0.36078432, g: 0.6039216, b: 0.5803922, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
