@@ -21,7 +21,7 @@ public class SpawnEnemy : MonoBehaviour
 	{
         if (Time.timeSinceLevelLoad > nextActionTime)
         {  
-            int random =Random.Range(0,2);
+            int random =Random.Range(0,2); //choisir obstacles du haut ou du bas
             if (random==0)
             {
                 nextActionTime += period;
@@ -32,11 +32,7 @@ public class SpawnEnemy : MonoBehaviour
                 }
                 if (period > 1)
 	            {
-	            period /= 1.5f;
-	            }
-	            else
-	            {
-	            period -= 0.01f;
+	                period -= 0.5f;
 	            }
             }
             else
@@ -47,10 +43,11 @@ public class SpawnEnemy : MonoBehaviour
 	            {
 	                Destroy(gameObject); // destruction sortie de l'ecran
 	            }
-	            if (period >0.5)
+	            if (period >1)
 	            {
-	                period /= 1.5f;
-	            }
+	               // period /= 1.5f;
+	                period -= 0.5f;
+                }
 	           
             }
         }

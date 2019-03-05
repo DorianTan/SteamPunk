@@ -66,10 +66,11 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         end = false;
     }
-
-    //public void End()
-    //{
-    //    Time.timeScale = 0;
-    //    end = true;
-    //}
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
 }
