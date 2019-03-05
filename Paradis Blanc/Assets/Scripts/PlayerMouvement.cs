@@ -16,13 +16,16 @@ public class PlayerMouvement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float maxSpeed;
 
-    [SerializeField] private float airMax; // Comme les chaussures XD   réponse: t'es sérieux ? XD
+    [SerializeField] private float airMax;
     public float AirMax => airMax;
     
     [SerializeField] private float decreaseAir;
     private float actualAir;
     public float ActualAir => actualAir;
 
+    private Light lt;
+    private float LightDecrease = 0.1f;
+    
     private AudioSource audioSource;
     [SerializeField] private AudioClip breath;
     
@@ -32,6 +35,7 @@ public class PlayerMouvement : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
         actualAir = airMax;
+        lt = GetComponent<Light>();
     }
     
     void Update()
@@ -62,14 +66,21 @@ public class PlayerMouvement : MonoBehaviour
         if (actualAir <= 25f/100 * airMax )
         {
             actualAir -= decreaseAir * Time.deltaTime/2;
+            lt.intensity -= LightDecrease * Time.deltaTime / 2;
         }
         else
         {
             actualAir -= decreaseAir * Time.deltaTime;
+            lt.intensity -= LightDecrease * Time.deltaTime;
         }
         if (actualAir <= 0)
         {
             Die();
+        }
+
+        if (lt.intensity > 1)
+        {
+            lt.intensity = 1;
         }
     }
 
